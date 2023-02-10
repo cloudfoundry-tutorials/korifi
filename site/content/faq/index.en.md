@@ -1,6 +1,6 @@
 ---
-title: "Mostly Asked Questions"
-description: "this is meta description"
+title: "Frequently Asked Questions"
+description: "frequently asked questions"
 draft: false
 _build:
   render: never
@@ -11,7 +11,7 @@ _build:
 {{< faq "How does Korifi differ from traditional Cloud Foundry?" >}}
 Korifi shares the same core goal of Cloud Foundry: to delight developers and operators with a highly efficient, modern model for cloud-native application delivery and management. However, Korifi is very different architecturally from traditional Cloud Foundry. 
 
-Traditional Cloud Foundry is deployed via [BOSH](https://bosh.io), on virtual machines, using infrastructure-as-a-service providers like VMWare or AWS. The core components of conventional Cloud Foundry are implemented in custom code and run as processes on virtual machines.
+Traditional Cloud Foundry is deployed via [BOSH](https://bosh.io), on virtual machines, using infrastructure-as-a-service providers like VMware or AWS. The core components of conventional Cloud Foundry are implemented in custom code and run as processes on virtual machines.
 
 Korifi is a new approach to implementing the Cloud Foundry APIs on Kubernetes. Most of the core Cloud Foundry components are replaced by implementations using Kubernetes native equivalents. Korifi leverages Kubernetes custom resources and role-based access control to implement the Cloud Foundry APIs, and whenever possible, Korifi uses existing Kubernetes ecosystem components.
 {{</ faq >}}
@@ -35,7 +35,7 @@ As you continue with Korifi, we recommend joining the [Cloud Foundry Slack](http
 {{</ faq >}}
 
 {{< faq "What does the name 'Korifi' mean?" >}}
-Sticking with the Kubernetes approach of using Greek names, Korifi roughly translates to "mountaintop."
+Sticking with the Kubernetes approach of using Greek names, Korifi roughly translates to "mountain" or "peak".
 {{</ faq >}}
 
 {{< faq "What's next for Korifi?" >}}

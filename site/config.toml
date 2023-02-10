@@ -1,5 +1,5 @@
 ######################## default configuration ####################
-baseURL = ""
+baseURL = "/korifi/"
 title = "Korifi by Cloud Foundry"
 theme = "godocs-1"
 # google analytics
