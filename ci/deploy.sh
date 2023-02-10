@@ -7,5 +7,6 @@ pushd $this_directory/../site
   hugo
 popd
 
-
-
+pushd $this_directory 
+  cf push
+popd
