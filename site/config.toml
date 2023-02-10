@@ -1,0 +1,180 @@
+######################## default configuration ####################
+baseURL = ""
+title = "Korifi by Cloud Foundry"
+theme = "godocs-1"
+# google analytics
+googleAnalytics = "" # example : UA-123-45
+# disable language
+disableLanguages = []
+
+# hugo outputs
+[outputs]
+home = ["HTML", "JSON"]
+
+# render unsafe html
+[markup.goldmark.renderer]
+unsafe = true
+
+############################# Plugins ##############################
+
+# CSS Plugins
+[[params.plugins.css]]
+link = "plugins/bootstrap/bootstrap.min.css"
+[[params.plugins.css]]
+link = "plugins/search/auto-complete.css"
+[[params.plugins.css]]
+link = "plugins/featherlight/featherlight.min.css"
+
+
+# JS Plugins
+[[params.plugins.js]]
+link = "plugins/jQuery/jquery.min.js"
+[[params.plugins.js]]
+link = "plugins/bootstrap/bootstrap.min.js"
+[[params.plugins.js]]
+link = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/js/all.min.js"
+attributes = "crossorigin='anonymous' defer='defer' data-search-pseudo-elements"
+[[params.plugins.js]]
+link = "plugins/masonry/masonry.min.js"
+[[params.plugins.js]]
+link = "plugins/featherlight/featherlight.min.js"
+[[params.plugins.js]]
+link = "plugins/clipboard/clipboard.min.js"
+[[params.plugins.js]]
+link = "plugins/search/auto-complete.js"
+[[params.plugins.js]]
+link = "plugins/search/search.js"
+[[params.plugins.js]]
+link = "plugins/search/lunr.min.js"
+[[params.plugins.js]]
+link = "plugins/search/fuse.min.js"
+[[params.plugins.js]]
+link = "plugins/search/mark.js"
+[[params.plugins.js]]
+link = "plugins/search/search-page.js"
+
+# site variables
+[params.variables]
+# Color Variables
+primary_color = "#2D74BA"
+text_color = "#454645"
+text_color_dark = "#454645"
+text_color_light = "#999"
+body_color = "#fff"
+border_color = "#E2E2E2"
+black = "#000"
+white = "#fff"
+light = "#FBFBFB"
+
+# Font Variables
+primary_font = "Open Sans"
+primary_font_type = "sans-serif"                         # [serif/sans-serif]
+secondary_font = ""
+secondary_font_type = ""                                 # [serif/sans-serif]
+icon_font = "Font Awesome 5 Free"
+
+#################### default parameters ################################
+[params]
+logo = "images/korifi-logo-color.png"
+favicon = "images/cf-favicon.png"
+# Meta data
+description = "Korifi aims to delight developers and operators with a highly efficient, modern model for cloud-native application delivery and management on Kubernetes. It is purpose-built to serve as a means to deploy and manage applications on Kubernetes while providing automated networking, security, availability, and much more. Finally, the simplicity of `cf push` is now available on Kubernetes."
+author = "Cloud Foundry"
+# contact form action
+# contact_form_action = "#" # contact form works with https://formspree.io
+
+# Preloader
+[params.preloader]
+enable = false
+preloader = "" # use jpg, png, svg or gif format.
+
+# Navigation button
+[[params.nav_button]]
+style = "outline" 
+label = "Source"
+link = "https://github.com/cloudfoundry/korifi"
+
+[[params.nav_button]]
+style = "solid"   # available style: solid, outline
+label = "Releases"
+link = "https://github.com/cloudfoundry/korifi/releases"
+
+
+############################# social site ########################
+# [[params.social]]
+# title = "facebook"
+# icon = "fab fa-facebook" # fontawesome icon : https://fontawesome.com/icons
+# link = "#"
+
+# [[params.social]]
+# title = "twitter"
+# icon = "fab fa-twitter" # fontawesome icon : https://fontawesome.com/icons
+# link = "#"
+
+[[params.social]]
+title = "github"
+icon = "fab fa-github" 
+link = "https://github.com/cloudfoundry-tutorials/korifi"
+
+[[params.social]]
+title = "slack"
+icon = "fab fa-slack"
+link = "https://slack.cloudfoundry.org/"
+
+
+################################### English language #####################################
+[Languages.en]
+languageName = "En"
+languageCode = "en-us"
+weight = 1
+# copyright
+copyright = "Copyright (c) 2022 - 2023 [Cloud Foundry Foundation](https://cloudfoundry.org)"
+
+# banner
+[Languages.en.banner]
+title = "Korifi by Cloud Foundry"
+subtitle = "Korifi aims to delight developers and operators with a highly efficient, modern model for cloud-native application delivery and management on Kubernetes. It is purpose-built to serve as a means to deploy and manage applications on Kubernetes while providing automated networking, security, availability, and much more. Finally, the simplicity of `cf push` is now available on Kubernetes!"
+image = "images/proven-developer-isometric.png"
+
+# call to action
+# [Languages.en.call_to_action]
+# enable = true
+# title = "Still Didn't Find Your Answer?"
+# image = "images/cta-illustration.jpg"
+# content = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam <br> nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam"
+
+# # call to action button
+# [Languages.en.call_to_action.button]
+# enable = "true"
+# label = "Submit a ticket"
+# link = "contact/"
+
+
+############## English navigation ###############
+# main menu
+# [[Languages.en.menu.main]]
+# name = "Home"
+# url = ""
+# weight = 1
+
+# [[Languages.en.menu.main]]
+# name = "Github"
+# url = 
+# weight = 2
+
+
+# footer menu
+# [[Languages.en.menu.footer]]
+# name = "Changelog"
+# url = "changelog/"
+# weight = 1
+
+# [[Languages.en.menu.footer]]
+# name = "Contact"
+# url = "contact/"
+# weight = 2
+
+# [[Languages.en.menu.footer]]
+# name = "Docs Repository"
+# url = "https://github.com/cloudfoundry-tutorials/korifi"
+# weight = 3

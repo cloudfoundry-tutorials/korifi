@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>/overview/</loc>
+  </url><url>
+    <loc>/local-install/</loc>
+  </url><url>
+    <loc>/k8s/</loc>
+    <lastmod>2018-12-28T11:02:05+06:00</lastmod>
+  </url><url>
+    <loc>/cf/</loc>
+    <lastmod>2018-12-28T11:02:05+06:00</lastmod>
+  </url><url>
+    <loc>/</loc>
+    <lastmod>2018-12-28T11:02:05+06:00</lastmod>
+  </url><url>
+    <loc>/categories/</loc>
+  </url><url>
+    <loc>/search/</loc>
+  </url><url>
+    <loc>/tags/</loc>
+  </url>
+</urlset>
