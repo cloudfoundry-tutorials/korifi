@@ -60,7 +60,7 @@ To install Korifi:
 
 We have provided a sample application you can deploy to your Korifi instance. However, before deploying, we need to set up our Cloud Foundry instance a bit by doing the following:
 
-- Target the Cloud Foundry instance: `cf api login --skip-ssl-validation`
+- Target the Cloud Foundry instance: `cf api localhost --skip-ssl-validation`
 - Authenticate: `cf auth cf-admin`
 - Create an [Org](https://docs.cloudfoundry.org/concepts/roles.html#orgs): `cf create-org tutorial`
 - Create a [Space](https://docs.cloudfoundry.org/concepts/roles.html#spaces): `cf create-space -o tutorial dev`
