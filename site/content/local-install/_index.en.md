@@ -25,6 +25,8 @@ Follow the instructions below to install the prerequisites.
 
 * [cf](https://github.com/cloudfoundry/cli/wiki/V8-CLI-Installation-Guide): cf is the Cloud Foundry command-line tool. Install the latest version of the Cloud Foundry CLI according to the instructions.
 
+* [kbld](https://carvel.dev/kbld/): kbld builds and copies the required docker images to the local registry. Install the latest version of kbld according to the instructions.
+
 ## Installation Overview
 
 The Korifi development team maintains an installation script to install Korifi locally. It installs the Kubernetes ecosystem dependencies outlined below and a local container registry. We will use this script to install Korifi. If you prefer, you can follow the [installation instructions](https://github.com/cloudfoundry/korifi/blob/main/INSTALL.kind.md) on GitHub to install Korifi manually.
