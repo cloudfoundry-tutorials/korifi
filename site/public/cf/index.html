@@ -212,7 +212,7 @@
           <h2 class="mb-4 font-weight-medium">Korifi for CF Users</h2>
           
           <div class="content"><p>If you are an existing Cloud Foundry user, your experience with Korifi will be pretty familiar. However, the underlying implementations of the Cloud Foundry API are quite different. This section focuses on the underlying Kubernetes representations of common Cloud Foundry constructs.</p>
-<p>Additionally, Korifi only supports a subset of the <a href="http://v3-apidocs.cloudfoundry.org/version/3.131.0/index.html">Cloud Foundry API</a>. The currently supported endpoints are documented in the <a href="https://github.com/cloudfoundry/korifi/blob/main/docs/api.md">Korifi API</a> documentation.</p>
+<p>Additionally, Korifi only supports a subset of the <a href="https://v3-apidocs.cloudfoundry.org">Cloud Foundry API</a>. The currently supported endpoints are documented in the <a href="https://github.com/cloudfoundry/korifi/blob/main/docs/api.md">Korifi API</a> documentation.</p>
 <h5 id="how-are-orgs-spaces-and-roles-implemented">How are orgs, spaces, and roles implemented?</h5>
 <p>Orgs and spaces are implemented using <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/">namespaces</a>. Roles are implemented using <a href="https://kubernetes.io/docs/reference/access-authn-authz/rbac/">Kubernetes RBAC</a>.</p>
 <p>Orgs and spaces will each have their own corresponding namespace. The name corresponds to the GUID of the org/space.</p>
