@@ -231,6 +231,9 @@
 <li>
 <p><a href="https://github.com/cloudfoundry/cli/wiki/V8-CLI-Installation-Guide">cf</a>: cf is the Cloud Foundry command-line tool. Install the latest version of the Cloud Foundry CLI according to the instructions.</p>
 </li>
+<li>
+<p><a href="https://carvel.dev/kbld/">kbld</a>: kbld builds and copies the required docker images to the local registry. Install the latest version of kbld according to the instructions.</p>
+</li>
 </ul>
 <h2 id="installation-overview">Installation Overview</h2>
 <p>The Korifi development team maintains an installation script to install Korifi locally. It installs the Kubernetes ecosystem dependencies outlined below and a local container registry. We will use this script to install Korifi. If you prefer, you can follow the <a href="https://github.com/cloudfoundry/korifi/blob/main/INSTALL.kind.md">installation instructions</a> on GitHub to install Korifi manually.</p>
@@ -268,7 +271,7 @@
 <h2 id="deploying-an-application">Deploying an Application</h2>
 <p>We have provided a sample application you can deploy to your Korifi instance. However, before deploying, we need to set up our Cloud Foundry instance a bit by doing the following:</p>
 <ul>
-<li>Target the Cloud Foundry instance: <code>cf api login --skip-ssl-validation</code></li>
+<li>Target the Cloud Foundry instance: <code>cf api localhost --skip-ssl-validation</code></li>
 <li>Authenticate: <code>cf auth cf-admin</code></li>
 <li>Create an <a href="https://docs.cloudfoundry.org/concepts/roles.html#orgs">Org</a>: <code>cf create-org tutorial</code></li>
 <li>Create a <a href="https://docs.cloudfoundry.org/concepts/roles.html#spaces">Space</a>: <code>cf create-space -o tutorial dev</code></li>
