@@ -10,7 +10,7 @@ weight: 4
 
 If you are an existing Cloud Foundry user, your experience with Korifi will be pretty familiar. However, the underlying implementations of the Cloud Foundry API are quite different. This section focuses on the underlying Kubernetes representations of common Cloud Foundry constructs.
 
-Additionally, Korifi only supports a subset of the [Cloud Foundry API](http://v3-apidocs.cloudfoundry.org/version/3.131.0/index.html). The currently supported endpoints are documented in the [Korifi API](https://github.com/cloudfoundry/korifi/blob/main/docs/api.md) documentation.
+Additionally, Korifi only supports a subset of the [Cloud Foundry API](https://v3-apidocs.cloudfoundry.org). The currently supported endpoints are documented in the [Korifi API](https://github.com/cloudfoundry/korifi/blob/main/docs/api.md) documentation.
 
 ##### How are orgs, spaces, and roles implemented?
 
