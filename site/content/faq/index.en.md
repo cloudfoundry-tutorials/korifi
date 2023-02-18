@@ -34,10 +34,16 @@ The easiest way to start is to follow the guide above to install Korifi locally.
 As you continue with Korifi, we recommend joining the [Cloud Foundry Slack](https://slack.cloudfoundry.org) and joining the `korifi-dev` channel.
 {{</ faq >}}
 
-{{< faq "What does the name 'Korifi' mean?" >}}
-Sticking with the Kubernetes approach of using Greek names, Korifi roughly translates to "mountain" or "peak".
+{{< faq "How are Cloud Foundry resources mapped in Kubernetes?" >}}
+The development team maintains a [resource mapping](https://github.com/cloudfoundry/korifi/blob/main/docs/architecture.md#cf----kubernetes-resource-mappings) table in the Korifi repository.
 {{</ faq >}}
 
 {{< faq "What's next for Korifi?" >}}
 Korifi will continue with active development, implementing more Cloud Foundry API endpoints and bringing new features and capabilities to Kubernetes. The team has laid out their [vision for CF on Kubernetes](https://docs.google.com/document/d/1rG814raI5UfGUsF_Ycrr8hKQMo1RH9TRMxuvkgHSdLg/edit), guiding the development efforts.
 {{</ faq >}}
+
+{{< faq "What does the name 'Korifi' mean?" >}}
+Sticking with the Kubernetes approach of using Greek names, Korifi roughly translates to "mountain" or "peak".
+{{</ faq >}}
+
+
