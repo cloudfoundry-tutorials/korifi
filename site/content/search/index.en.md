@@ -1,6 +1,8 @@
 ---
 title: "Search Result"
-description: "this is meta description"
+description: "search results"
 layout: "search"
-draft: false
+_build:
+  render: never
+  list: never
 ---
