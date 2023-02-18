@@ -86,4 +86,6 @@ NAME                                   DISPLAY NAME   AGE
 d60fe7b7-f080-4caa-a26b-b811c88d766e   sample-app     17h
 ```
 
-There are plenty of other resources to dive into, should you choose. However, if you are a Cloud Foundry user, you likely don't care too much about the underlying implementations. Happy pushing!
+##### Cloud Foundry Resource Mappings
+
+If you would like a more complete picture of Cloud Foundry resources in Korifi refer to the table of [Cloud Foundry to Kubernetes resource mappings](https://github.com/cloudfoundry/korifi/blob/main/docs/architecture.md#cf----kubernetes-resource-mappings). There are plenty of other resources to dive into, should you choose. However, if you are a Cloud Foundry user, you likely don't care too much about the underlying implementations. **Happy pushing!**
