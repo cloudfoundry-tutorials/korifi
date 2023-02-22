@@ -7,7 +7,7 @@ type : "docs"
 weight: 3
 ---
 
-As we have stated, Korifi is an implementation on top of Kubernetes. Because of this, you can view Korifi resources either at the higher level (application-centric) abstraction using the `cf` CLI or at the lower level (container-centric) using `kubectl`. However, because the use of `kubectl` is not required to use Korifi, we will not go in-depth on the use of `kubectl` with Korifi elements. 
+As we have stated, Korifi is an implementation on top of Kubernetes. Because of this, you can view Korifi resources either at the higher level (application-centric) abstraction using the `cf` CLI or at the lower level (container-centric) using `kubectl`. However, because the use of `kubectl` is not required to use Korifi, we will not go in-depth on the use of `kubectl` with Korifi elements.
 
 ## Korifi with kubectl
 
@@ -15,7 +15,7 @@ You can use `kubectl` to view and interact with the underlying Korifi components
 
 ##### Namespaces
 
-The Korifi installation creates multiple namespaces. You can view the namespaces created by Korifi (denoted below with a "*"). 
+The Korifi installation creates multiple namespaces. You can view the namespaces created by Korifi (denoted below with a "*").
 
 ```
 kubectl get namespaces
@@ -81,7 +81,7 @@ In Korifi, the primary unit of focus is the application. An application is a hig
 
 ##### How do I run a container image?
 
-With Korifi, you do not need to bring a container image. Instead, you bring your application code (uploaded during the `cf push`). Korifi will use [kpack](https://github.com/pivotal/kpack) and [Paketo](https://paketo.io) buildpacks to construct an [OCI](https://opencontainers.org/about/overview/) compatible container image for your application.  
+With Korifi, you do not need to bring a container image. Instead, you bring your application code (uploaded during the `cf push`). Korifi will use [kpack](https://github.com/pivotal/kpack) and [Paketo](https://paketo.io) buildpacks to construct an [OCI](https://opencontainers.org/about/overview/) compatible container image for your application.
 
 Paketo is an implementation of [Cloud Native Buildpacks](https://buildpacks.io), an easier, more streamlined, secure, and repeatable way to build container images. Cloud Native Buildpacks are part of the [Cloud Native Computing Foundation](https://cncf.io) and are supported by all major cloud providers. So while Korifi ships with the Paketo implementation, you can use other provider implementations as well.
 
@@ -109,14 +109,14 @@ requested state:   started
 routes:            sample-app.apps-127-0-0-1.nip.io
 last uploaded:     Thu 09 Feb 16:34:02 MST 2023
 stack:             io.buildpacks.stacks.bionic
-buildpacks:        
+buildpacks:
 
 type:           web
-sidecars:       
+sidecars:
 instances:      1/1
 memory usage:   32M
      state     since                  cpu    memory         disk       logging      details
-#0   running   2023-02-10T00:23:19Z   0.0%   22.1M of 32M   0 of 64M   0/s of 0/s 
+#0   running   2023-02-10T00:23:19Z   0.0%   22.1M of 32M   0 of 64M   0/s of 0/s
 ```
 
 The depths of the [Cloud Foundry API](https://github.com/cloudfoundry/korifi/blob/main/docs/api.md) are outside the scope of this tutorial. However, we recommend you peruse the documentation and the features in the `cf` CLI. You will notice that you have access to all the same Kubernetes primitives and the higher-level resource definitions.
@@ -125,21 +125,21 @@ The depths of the [Cloud Foundry API](https://github.com/cloudfoundry/korifi/blo
 
 In Korifi, you can scale your application using `cf scale` to add instances (horizontal scale) or memory (vertical scale). Korifi will handle the rest. You do not need to update any other configuration.
 
-##### How do I allow traffic into my application? 
+##### How do I allow traffic into my application?
 
 By default, applications are deployed with an assigned route. This route is used to access the application. Korifi manages the ingress routing for you. You can also deploy applications without a route if ingress is not required.
 
 ##### How do I create a load balancer between pods?
 
-You don't need to. Instead, as you add (or remove) instances with the `cf scale` command, Korifi handles this for you. 
+You don't need to. Instead, as you add (or remove) instances with the `cf scale` command, Korifi handles this for you.
 
-##### How do I restart apps/pods/containers? 
+##### How do I restart apps/pods/containers?
 
 You likely won't need to in most cases. However, if you want to, you can use the `cf start`, `cf stop`, and `cf restart` commands.
 
-##### How to update the application to a new version? Will this cause downtime?
+##### How to update the application to a new version?
 
-You can simply re-run the `cf push` command when you have a new version of your application. If you want to avoid downtime, add `--strategy rolling` and Korifi will update your running application instances (pods) to ensure no downtime. The rolling strategy replaces one instance (pod) at a time, updating routing tables and load balancing based on instance availability.
+You can simply re-run the `cf push` command when you have a new version of your application.
 
 ##### How can I create isolation between projects?
 
