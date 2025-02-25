@@ -25,15 +25,12 @@ Follow the instructions below to install the prerequisites.
 
 * [cf](https://github.com/cloudfoundry/cli/wiki/V8-CLI-Installation-Guide): cf is the Cloud Foundry command-line tool. Install the latest version of the Cloud Foundry CLI according to the instructions.
 
-* [kbld](https://carvel.dev/kbld/): kbld builds and copies the required docker images to the local registry. Install the latest version of kbld according to the instructions.
-
 ## Installation Overview
 
-The Korifi development team maintains an installation script to install Korifi locally. It installs the Kubernetes ecosystem dependencies outlined below and a local container registry. We will use this script to install Korifi. If you prefer, you can follow the [installation instructions](https://github.com/cloudfoundry/korifi/blob/main/INSTALL.kind.md) on GitHub to install Korifi manually.
+The Korifi development team maintains an installation job to install Korifi locally. It installs the Kubernetes ecosystem dependencies outlined below and a local container registry. We will use this job to install Korifi. If you prefer, you can follow the [installation instructions](https://github.com/cloudfoundry/korifi/blob/main/INSTALL.kind.md) on GitHub to install Korifi manually.
 
-The install script does the following before installing Korifi:
+The run the job does the following:
 
-- Creates a [kind](https://kind.sigs.k8s.io) cluster with the correct port mappings for Korifi and other components.
 - Deploys a local Docker registry using the [twuni helm chart](https://github.com/twuni/docker-registry.helm).
 - Creates an admin user for Cloud Foundry.
 - Installs [cert-manager](https://github.com/cert-manager/cert-manager). cert-manager is used to create and manage internal certificates within the cluster.
@@ -41,27 +38,24 @@ The install script does the following before installing Korifi:
 - Installs [contour](https://projectcontour.io). Contour is the ingress controller for Korifi.
 - Installs the [service binding runtime](https://github.com/servicebinding/runtime) which is an implementation of the [service binding spec](https://servicebinding.io/).
 - Install the [metrics server](https://github.com/kubernetes-sigs/metrics-server)
+- Installs [latest Korifi release](https://github.com/cloudfoundry/korifi/releases/latest) on the kind cluster
 
 ## Installing Korifi
 
-While you can install all of the above manually, it is far easier to use the `deploy-on-kind.sh` script in the Korifi repository. 
+While you can install all of the above manually, it is far easier to use the installer job.
 
-> Please note the Korifi development team uses this script for local development. It is not intended for production use. At times the script may change or break.
+> Please note the installer job would install Korifi with the [experimental managed services support](https://github.com/cloudfoundry/korifi/blob/7907864318aa6d22ed435ee72f74fb168995a841/helm/korifi/values.yaml#L148) turned on.
 
-To install Korifi:
+Running the installer job is documented in the Korifi's [kind install guide](https://github.com/cloudfoundry/korifi/blob/main/INSTALL.kind.md).
 
-- Clone the Korifi repository locally: `git clone https://github.com/cloudfoundry/korifi`
-- Change to the `scripts` directory: `cd korifi/scripts`
-- Install Korifi using the `deploy-on-kind.sh` script: `./deploy-on-kind.sh korifi`
-  
-  > Note, the name 'korifi' above is the name of the cluster created in kind. You can use any name you would like.
+  > Note, below we assume `korifi` to be the name of the cluster you would deploy to. You can use any name you would like.
 
 ## Deploying an Application
 
 We have provided a sample application you can deploy to your Korifi instance. However, before deploying, we need to set up our Cloud Foundry instance a bit by doing the following:
 
-- Target the Cloud Foundry instance: `cf api localhost --skip-ssl-validation`
-- Authenticate: `cf auth cf-admin`
+- Target the Cloud Foundry instance: `cf api https://localhost --skip-ssl-validation`
+- Authenticate: `cf auth kind-korifi`
 - Create an [Org](https://docs.cloudfoundry.org/concepts/roles.html#orgs): `cf create-org tutorial`
 - Create a [Space](https://docs.cloudfoundry.org/concepts/roles.html#spaces): `cf create-space -o tutorial dev`
 - Target the Org and Space you created: `cf target -o tutorial -s dev`
