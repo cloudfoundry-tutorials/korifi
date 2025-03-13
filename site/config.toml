@@ -83,6 +83,11 @@ author = "Cloud Foundry"
 # contact form action
 # contact_form_action = "#" # contact form works with https://formspree.io
 
+[params.banner]
+title = "Korifi by Cloud Foundry"
+subtitle = "Korifi aims to delight developers and operators with a highly efficient, modern model for cloud-native application delivery and management on Kubernetes. It is purpose-built to serve as a means to deploy and manage applications on Kubernetes while providing automated networking, security, availability, and much more. Finally, the simplicity of `cf push` is now available on Kubernetes!"
+image = "images/proven-developer-isometric.png"
+
 # Preloader
 [params.preloader]
 enable = false
@@ -128,7 +133,7 @@ languageName = "En"
 languageCode = "en-us"
 weight = 1
 # copyright
-copyright = "Copyright (c) 2022 - 2023 [Cloud Foundry Foundation](https://cloudfoundry.org)"
+copyright = "Copyright (c) 2022 - 2025 [Cloud Foundry Foundation](https://cloudfoundry.org)"
 
 # banner
 [Languages.en.banner]
